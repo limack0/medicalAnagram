@@ -83,26 +83,11 @@ document.addEventListener('DOMContentLoaded', function() {
 async function loadMedicalTerms() {
     try {
         // Charger depuis le fichier terms.json
-        const response = await fetch('terms.json');
+        const response = await fetch('https://raw.githubusercontent.com/limack0/medicalAnagram/master/terms.json?raw=true');
         terms = await response.json();
     } catch (error) {
         console.error('Erreur lors du chargement des termes médicaux:', error);
         
-        // Termes par défaut en cas d'erreur
-        terms = [
-            { term: "stéthoscope", definition: "Instrument médical utilisé pour écouter les sons internes du corps." },
-            { term: "antibiotique", definition: "Substance qui tue ou inhibe la croissance des bactéries." },
-            { term: "hypertension", definition: "Pression artérielle anormalement élevée." },
-            { term: "gastroentérite", definition: "Inflammation de l'estomac et des intestins." },
-            { term: "ophtalmologue", definition: "Médecin spécialiste des maladies des yeux." },
-            { term: "cardiologie", definition: "Spécialité médicale concernant le cœur et les vaisseaux sanguins." },
-            { term: "neurologie", definition: "Spécialité médicale concernant le système nerveux." },
-            { term: "pédiatrie", definition: "Spécialité médicale concernant les enfants." },
-            { term: "dermatologie", definition: "Spécialité médicale concernant la peau." },
-            { term: "radiographie", definition: "Technique d'imagerie utilisant des rayons X." }
-        ];
-        
-        showResult("Chargement des termes échoué, utilisation des termes par défaut.", "error");
     }
 }
 
