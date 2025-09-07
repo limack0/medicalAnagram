@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anagrammes Médicales | Jeu Complet</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="theme-default">
+    <div class="container">
+        <div class="ribbon">NOUVEAU</div>
+        
+        <!-- Écran d'accueil -->
+        <div class="welcome-screen" id="welcome-screen">
+            <header>
+                <h1><i class="fas fa-stethoscope"></i> Anagrammes Médicales</h1>
+                <p class="subtitle">20 questions pour tester vos connaissances médicales</p>
+            </header>
+            
+            <div class="theme-selector">
+                <div class="theme-option theme-default active" data-theme="default"></div>
+                <div class="theme-option theme-dark" data-theme="dark"></div>
+                <div class="theme-option theme-nature" data-theme="nature"></div>
+            </div>
+            
+            <div class="difficulty-selector">
+                <div class="difficulty-btn difficulty-easy active" data-difficulty="easy">Débutant</div>
+                <div class="difficulty-btn difficulty-medium" data-difficulty="medium">Intermédiaire</div>
+                <div class="difficulty-btn difficulty-hard" data-difficulty="hard">Expert</div>
+            </div>
+            
+            <div class="features-grid">
+                <div class="feature-card" id="feature-play">
+                    <div class="feature-icon">
+                        <i class="fas fa-play"></i>
+                    </div>
+                    <div class="feature-title">Jouer</div>
+                    <div class="feature-desc">Commencer une nouvelle partie</div>
+                </div>
+                
+                <div class="feature-card" id="feature-stats">
+                    <div class="feature-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <div class="feature-title">Statistiques</div>
+                    <div class="feature-desc">Vos performances</div>
+                </div>
+                
+                <div class="feature-card" id="feature-leaderboard">
+                    <div class="feature-icon">
+                        <i class="fas fa-trophy"></i>
+                    </div>
+                    <div class="feature-title">Classement</div>
+                    <div class="feature-desc">Comparez vos scores</div>
+                </div>
+                
+                <div class="feature-card" id="feature-settings">
+                    <div class="feature-icon">
+                        <i class="fas fa-cog"></i>
+                    </div>
+                    <div class="feature-title">Paramètres</div>
+                    <div class="feature-desc">Personnalisez l'application</div>
+                </div>
+            </div>
+            
+            <div class="welcome-actions">
+                <button id="start-new-btn" class="action-btn action-primary">
+                    <i class="fas fa-play"></i> Nouvelle partie
+                </button>
+                <button id="resume-btn" class="action-btn action-secondary">
+                    <i class="fas fa-history"></i> Reprendre la partie
+                </button>
+            </div>
+        </div>
+        
+        <!-- Écran de jeu -->
+        <div id="game-screen" style="display: none;">
+            <header>
+                <h1><i class="fas fa-stethoscope"></i> Anagrammes Médicales</h1>
+                <p class="subtitle">Question <span id="current-question">1</span>/20</p>
+            </header>
+            
+            <div class="progress-container">
+                <div class="progress-bar">
+                    <div class="progress-fill" id="progress-fill"></div>
+                </div>
+                <div class="progress-text">
+                    <span>Progression</span>
+                    <span><span id="progress-percent">0</span>% complété</span>
+                </div>
+            </div>
+            
+            <div class="game-stats">
+                <div class="stat">
+                    <span class="stat-value" id="score">0</span>
+                    <span class="stat-label">Score</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-value" id="streak">0</span>
+                    <span class="stat-label">Série</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-value" id="correct">0</span>
+                    <span class="stat-label">Corrects</span>
+                </div>
+            </div>
+            
+            <div class="anagram-container">
+                <div class="anagram-display" id="anagram"></div>
+                <button class="shuffle-btn" id="shuffle-btn">
+                    <i class="fas fa-random"></i>
+                </button>
+            </div>
+            
+            <div class="input-area">
+                <input type="text" id="user-input" placeholder="Saisissez votre réponse...">
+                <div class="action-buttons">
+                    <button id="validate-btn">
+                        <i class="fas fa-check"></i>
+                    </button>
+                    <button id="hint-btn">
+                        <i class="fas fa-lightbulb"></i>
+                    </button>
+                </div>
+            </div>
+            
+            <div id="result" class="result"></div>
+            
+            <div class="hint-container" id="hint-container">
+                <div class="hint-text" id="hint-text"></div>
+            </div>
+            
+            <div class="definition" id="definition"></div>
+            
+            <div class="controls">
+                <button id="skip-btn">
+                    <i class="fas fa-forward"></i> Passer
+                </button>
+                <button id="save-exit-btn" style="background: var(--accent);">
+                    <i class="fas fa-save"></i> Sauvegarder
+                </button>
+            </div>
+        </div>
+        
+        <!-- Écran de résumé -->
+        <div class="game-summary" id="game-summary" style="display: none;">
+            <div class="summary-title">Partie terminée!</div>
+            <div class="summary-stats">
+                <div class="summary-stat">
+                    <div class="summary-value" id="final-score">0</div>
+                    <div class="summary-label">Score final</div>
+                </div>
+                <div class="summary-stat">
+                    <div class="summary-value" id="correct-answers">0</div>
+                    <div class="summary-label">Bonnes réponses</div>
+                </div>
+                <div class="summary-stat">
+                    <div class="summary-value" id="success-rate">0%</div>
+                    <div class="summary-label">Taux de réussite</div>
+                </div>
+            </div>
+            
+            <div class="badges-container">
+                <div class="badge locked">
+                    <i class="fas fa-crown"></i>
+                    <div class="badge-tooltip">Maître des anagrammes</div>
+                </div>
+                <div class="badge">
+                    <i class="fas fa-fire"></i>
+                    <div class="badge-tooltip">Série de 10 réponses</div>
+                </div>
+                <div class="badge locked">
+                    <i class="fas fa-brain"></i>
+                    <div class="badge-tooltip">Expert médical</div>
+                </div>
+            </div>
+            
+            <div class="summary-actions">
+                <button id="play-again-btn" class="action-btn action-primary">
+                    <i class="fas fa-play"></i> Rejouer
+                </button>
+                <button id="share-btn" class="action-btn action-secondary">
+                    <i class="fas fa-share-alt"></i> Partager
+                </button>
+                <button id="back-to-menu-btn" class="action-btn action-success">
+                    <i class="fas fa-home"></i> Menu principal
+                </button>
+            </div>
+        </div>
+        
+        <!-- Écran de statistiques -->
+        <div class="stats-container" id="stats-screen" style="display: none;">
+            <div class="settings-title">
+                <i class="fas fa-chart-line"></i> Vos Statistiques
+            </div>
+            
+            <div class="stat-row">
+                <span class="stat-label">Parties jouées</span>
+                <span class="stat-value" id="stats-games-played">0</span>
+            </div>
+            <div class="stat-row">
+                <span class="stat-label">Meilleur score</span>
+                <span class="stat-value" id="stats-best-score">0</span>
+            </div>
+            <div class="stat-row">
+                <span class="stat-label">Termes maîtrisés</span>
+                <span class="stat-value" id="stats-terms-mastered">0/120</span>
+            </div>
+            <div class="stat-row">
+                <span class="stat-label">Taux de réussite</span>
+                <span class="stat-value" id="stats-success-rate">0%</span>
+            </div>
+            
+            <div class="action-buttons">
+                <button class="action-btn action-primary" id="stats-back-btn">
+                    <i class="fas fa-arrow-left"></i> Retour
+                </button>
+            </div>
+        </div>
+        
+        <!-- Écran de classement -->
+        <div class="leaderboard" id="leaderboard-screen">
+            <div class="settings-title">
+                <i class="fas fa-trophy"></i> Classement
+            </div>
+            
+            <ul class="leaderboard-list">
+                <li class="leaderboard-item current-user">
+                    <span class="leaderboard-position">1</span>
+                    <span class="leaderboard-name">Vous</span>
+                    <span class="leaderboard-score">185 pts</span>
+                </li>
+                <li class="leaderboard-item">
+                    <span class="leaderboard-position">2</span>
+                    <span class="leaderboard-name">Dr. Dupont</span>
+                    <span class="leaderboard-score">172 pts</span>
+                </li>
+                <li class="leaderboard-item">
+                    <span class="leaderboard-position">3</span>
+                    <span class="leaderboard-name">Inf. Martin</span>
+                    <span class="leaderboard-score">158 pts</span>
+                </li>
+                <li class="leaderboard-item">
+                    <span class="leaderboard-position">4</span>
+                    <span class="leaderboard-name">Étudiant Léa</span>
+                    <span class="leaderboard-score">142 pts</span>
+                </li>
+                <li class="leaderboard-item">
+                    <span class="leaderboard-position">5</span>
+                    <span class="leaderboard-name">Interne Thomas</span>
+                    <span class="leaderboard-score">135 pts</span>
+                </li>
+            </ul>
+            
+            <div class="action-buttons">
+                <button class="action-btn action-primary" id="leaderboard-back-btn">
+                    <i class="fas fa-arrow-left"></i> Retour
+                </button>
+            </div>
+        </div>
+        
+        <!-- Écran de paramètres -->
+        <div class="settings-panel" id="settings-screen">
+            <div class="settings-title">
+                <i class="fas fa-cog"></i> Paramètres
+            </div>
+            
+            <div class="settings-section">
+                <div class="settings-option">
+                    <span>Effets sonores</span>
+                    <label class="switch">
+                        <input type="checkbox" id="sound-toggle" checked>
+                        <span class="slider"></span>
+                    </label>
+                </div>
+                <div class="settings-option">
+                    <span>Animations</span>
+                    <label class="switch">
+                        <input type="checkbox" id="animations-toggle" checked>
+                        <span class="slider"></span>
+                    </label>
+                </div>
+                <div class="settings-option">
+                    <span>Mode contraste élevé</span>
+                    <label class="switch">
+                        <input type="checkbox" id="contrast-toggle">
+                        <span class="slider"></span>
+                    </label>
+                </div>
+            </div>
+            
+            <div class="settings-section">
+                <div class="settings-title">
+                    <i class="fas fa-bell"></i> Notifications
+                </div>
+                <div class="settings-option">
+                    <span>Défis quotidiens</span>
+                    <label class="switch">
+                        <input type="checkbox" id="daily-challenge-toggle" checked>
+                        <span class="slider"></span>
+                    </label>
+                </div>
+                <div class="settings-option">
+                    <span>Rappels de jeu</span>
+                    <label class="switch">
+                        <input type="checkbox" id="reminders-toggle">
+                        <span class="slider"></span>
+                    </label>
+                </div>
+            </div>
+            
+            <div class="action-buttons">
+                <button class="action-btn action-primary" id="settings-back-btn">
+                    <i class="fas fa-arrow-left"></i> Retour
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <div class="save-indicator" id="save-indicator">
+        <i class="fas fa-check-circle"></i> Partie sauvegardée
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

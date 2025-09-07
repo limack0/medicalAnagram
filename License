@@ -1,0 +1,29 @@
+
+## Déploiement sur GitHub Pages
+
+1. Créez un nouveau repository sur GitHub
+2. Téléchargez tous les fichiers dans le repository
+3. Allez dans Settings > Pages
+4. Sélectionnez la branche main et sauvegardez
+5. Votre application sera accessible à l'adresse : `https://limack0.github.io/medicalAnagram/`
+
+## Intégration avec Telegram
+
+Une fois déployé sur GitHub Pages, vous pouvez intégrer l'application à votre bot Telegram :
+
+```javascript
+bot.onText(/\/anagrammes/, (msg) => {
+  const chatId = msg.chat.id;
+  const keyboard = {
+    inline_keyboard: [[
+      {
+        text: "🎮 Jouer aux anagrammes médicaux",
+        web_app: { url: "https://limack0.github.io/medicalAnagram/" }
+      }
+    ]]
+  };
+  
+  bot.sendMessage(chatId, "Testez vos connaissances médicales avec ce jeu d'anagrammes!", {
+    reply_markup: keyboard
+  });
+});

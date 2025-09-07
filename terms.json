@@ -1,0 +1,346 @@
+[
+    {
+        "term": "stéthoscope",
+        "definition": "Instrument médical utilisé pour écouter les sons internes du corps."
+    },
+    {
+        "term": "antibiotique",
+        "definition": "Substance qui tue ou inhibe la croissance des bactéries."
+    },
+    {
+        "term": "hypertension",
+        "definition": "Pression artérielle anormalement élevée."
+    },
+    {
+        "term": "gastroentérite",
+        "definition": "Inflammation de l'estomac et des intestins."
+    },
+    {
+        "term": "ophtalmologue",
+        "definition": "Médecin spécialiste des maladies des yeux."
+    },
+    {
+        "term": "cardiologie",
+        "definition": "Spécialité médicale concernant le cœur et les vaisseaux sanguins."
+    },
+    {
+        "term": "neurologie",
+        "definition": "Spécialité médicale concernant le système nerveux."
+    },
+    {
+        "term": "pédiatrie",
+        "definition": "Spécialité médicale concernant les enfants."
+    },
+    {
+        "term": "dermatologie",
+        "definition": "Spécialité médicale concernant la peau."
+    },
+    {
+        "term": "radiographie",
+        "definition": "Technique d'imagerie utilisant des rayons X."
+    },
+    {
+        "term": "IRM",
+        "definition": "Imagerie par Résonance Magnétique, technique d'imagerie médicale."
+    },
+    {
+        "term": "anesthésie",
+        "definition": "Méthode pour supprimer la douleur lors d'une intervention."
+    },
+    {
+        "term": "dialyse",
+        "definition": "Procédé de purification du sang en cas d'insuffisance rénale."
+    },
+    {
+        "term": "hémoglobine",
+        "definition": "Protéine du sang qui transporte l'oxygène."
+    },
+    {
+        "term": "diabète",
+        "definition": "Maladie caractérisée par un excès de sucre dans le sang."
+    },
+    {
+        "term": "oncologie",
+        "definition": "Spécialité médicale consacrée au traitement des cancers."
+    },
+    {
+        "term": "psychiatrie",
+        "definition": "Spécialité médicale traitant des maladies mentales."
+    },
+    {
+        "term": "orthopédie",
+        "definition": "Spécialité médicale concernant les os et articulations."
+    },
+    {
+        "term": "traumatologie",
+        "definition": "Spécialité médicale des blessures et traumatismes."
+    },
+    {
+        "term": "immunologie",
+        "definition": "Étude du système immunitaire et de ses maladies."
+    },
+    {
+        "term": "allergologie",
+        "definition": "Spécialité médicale concernant les allergies."
+    },
+    {
+        "term": "virologie",
+        "definition": "Science étudiant les virus."
+    },
+    {
+        "term": "bactériologie",
+        "definition": "Science étudiant les bactéries."
+    },
+    {
+        "term": "pharmacologie",
+        "definition": "Science des médicaments et de leurs effets."
+    },
+    {
+        "term": "endocrinologie",
+        "definition": "Spécialité médicale concernant les glandes endocrines et hormones."
+    },
+    {
+        "term": "hématologie",
+        "definition": "Spécialité médicale concernant le sang et ses maladies."
+    },
+    {
+        "term": "néphrologie",
+        "definition": "Spécialité médicale concernant les reins."
+    },
+    {
+        "term": "pneumologie",
+        "definition": "Spécialité médicale concernant les poumons et les voies respiratoires."
+    },
+    {
+        "term": "gynécologie",
+        "definition": "Spécialité médicale concernant l'appareil reproducteur féminin."
+    },
+    {
+        "term": "obstétrique",
+        "definition": "Spécialité médicale concernant la grossesse et l'accouchement."
+    },
+    {
+        "term": "urologie",
+        "definition": "Spécialité médicale concernant les voies urinaires et les organes génitaux masculins."
+    },
+    {
+        "term": "pathologie",
+        "definition": "Étude des maladies."
+    },
+    {
+        "term": "anatomie",
+        "definition": "Science décrivant la structure du corps humain."
+    },
+    {
+        "term": "physiologie",
+        "definition": "Science étudiant le fonctionnement des organes et systèmes du corps."
+    },
+    {
+        "term": "cytologie",
+        "definition": "Étude des cellules."
+    },
+    {
+        "term": "histologie",
+        "definition": "Étude des tissus biologiques."
+    },
+    {
+        "term": "prothèse",
+        "definition": "Dispositif médical remplaçant un organe ou membre."
+    },
+    {
+        "term": "vaccination",
+        "definition": "Administration d'un vaccin pour protéger contre une maladie."
+    },
+    {
+        "term": "pandémie",
+        "definition": "Propagation mondiale d'une maladie."
+    },
+    {
+        "term": "épidémie",
+        "definition": "Propagation rapide d'une maladie dans une région donnée."
+    },
+    {
+        "term": "syndrome",
+        "definition": "Ensemble de signes cliniques caractérisant une maladie."
+    },
+    {
+        "term": "pronostic",
+        "definition": "Prévision de l'évolution d'une maladie."
+    },
+    {
+        "term": "diagnostic",
+        "definition": "Identification d'une maladie à partir de ses symptômes."
+    },
+    {
+        "term": "thrombose",
+        "definition": "Formation d'un caillot sanguin dans un vaisseau."
+    },
+    {
+        "term": "embolie",
+        "definition": "Obstruction d'un vaisseau par un corps étranger (caillot, air, graisse)."
+    },
+    {
+        "term": "infarctus",
+        "definition": "Nécrose d'un tissu due à un défaut d'oxygénation, souvent cardiaque."
+    },
+    {
+        "term": "angine",
+        "definition": "Inflammation douloureuse de la gorge."
+    },
+    {
+        "term": "otite",
+        "definition": "Inflammation de l'oreille."
+    },
+    {
+        "term": "asthme",
+        "definition": "Maladie respiratoire chronique avec gêne à l'expiration."
+    },
+    {
+        "term": "arythmie",
+        "definition": "Trouble du rythme cardiaque."
+    },
+    {
+        "term": "bradycardie",
+        "definition": "Ralentissement du rythme cardiaque."
+    },
+    {
+        "term": "tachycardie",
+        "definition": "Accélération du rythme cardiaque."
+    },
+    {
+        "term": "angor",
+        "definition": "Douleur thoracique liée à une mauvaise irrigation du cœur."
+    },
+    {
+        "term": "valvulopathie",
+        "definition": "Maladie touchant les valves cardiaques."
+    },
+    {
+        "term": "BPCO",
+        "definition": "Broncho-pneumopathie chronique obstructive."
+    },
+    {
+        "term": "emphysème",
+        "definition": "Destruction des alvéoles pulmonaires entraînant une gêne respiratoire."
+    },
+    {
+        "term": "apnée du sommeil",
+        "definition": "Arrêts respiratoires répétés pendant le sommeil."
+    },
+    {
+        "term": "AVC",
+        "definition": "Accident vasculaire cérébral, interruption du flux sanguin dans le cerveau."
+    },
+    {
+        "term": "épilepsie",
+        "definition": "Maladie neurologique caractérisée par des crises convulsives."
+    },
+    {
+        "term": "sclérose en plaques",
+        "definition": "Maladie auto-immune affectant le système nerveux central."
+    },
+    {
+        "term": "migraine",
+        "definition": "Céphalée chronique souvent accompagnée de nausées et sensibilité à la lumière."
+    },
+    {
+        "term": "cirrhose",
+        "definition": "Atteinte chronique du foie avec fibrose."
+    },
+    {
+        "term": "hépatite",
+        "definition": "Inflammation du foie."
+    },
+    {
+        "term": "ulcère gastrique",
+        "definition": "Lésion de la muqueuse de l'estomac."
+    },
+    {
+        "term": "maladie de Crohn",
+        "definition": "Maladie inflammatoire chronique de l'intestin."
+    },
+    {
+        "term": "rectocolite hémorragique",
+        "definition": "Inflammation chronique du côlon et du rectum."
+    },
+    {
+        "term": "septicémie",
+        "definition": "Infection généralisée du sang."
+    },
+    {
+        "term": "méningite",
+        "definition": "Inflammation des membranes entourant le cerveau et la moelle épinière."
+    },
+    {
+        "term": "tuberculose",
+        "definition": "Infection bactérienne chronique affectant principalement les poumons."
+    },
+    {
+        "term": "paludisme",
+        "definition": "Infection parasitaire transmise par les moustiques."
+    },
+    {
+        "term": "SIDA",
+        "definition": "Syndrome d’immunodéficience acquise dû au VIH."
+    },
+    {
+        "term": "hypothyroïdie",
+        "definition": "Insuffisance de sécrétion des hormones thyroïdiennes."
+    },
+    {
+        "term": "hyperthyroïdie",
+        "definition": "Excès de sécrétion des hormones thyroïdiennes."
+    },
+    {
+        "term": "goitre",
+        "definition": "Augmentation du volume de la glande thyroïde."
+    },
+    {
+        "term": "cushing",
+        "definition": "Syndrome lié à un excès de cortisol."
+    },
+    {
+        "term": "addison",
+        "definition": "Insuffisance surrénalienne chronique."
+    },
+    {
+        "term": "leucémie",
+        "definition": "Cancer du sang touchant les globules blancs."
+    },
+    {
+        "term": "mélanome",
+        "definition": "Cancer de la peau développé à partir des mélanocytes."
+    },
+    {
+        "term": "lymphome",
+        "definition": "Cancer du système lymphatique."
+    },
+    {
+        "term": "sarcome",
+        "definition": "Cancer des tissus conjonctifs."
+    },
+    {
+        "term": "carcinome",
+        "definition": "Cancer développé à partir des cellules épithéliales."
+    },
+    {
+        "term": "arthrose",
+        "definition": "Dégénérescence du cartilage articulaire."
+    },
+    {
+        "term": "polyarthrite rhumatoïde",
+        "definition": "Maladie auto-immune provoquant une inflammation chronique des articulations."
+    },
+    {
+        "term": "spondylarthrite ankylosante",
+        "definition": "Maladie inflammatoire chronique de la colonne vertébrale."
+    },
+    {
+        "term": "goutte",
+        "definition": "Arthrite due à un excès d'acide urique."
+    },
+    {
+        "term": "lupus",
+        "definition": "Maladie auto-immune chronique multisystémique."
+    }
+]
